@@ -12,4 +12,8 @@ class Property extends Model
     protected $fillable = ["title", "location", "latitude", "longitude", "price", "bedroom", "bath", "kitchen", "description", "video", "air_condition", "belcony", "gym", "garden", "cctv", "children_play_ground", "community_center", "security_system"];
 
     const types = ["Villa", "Appartment", "Duplex", "Townhouse", "Single-family home", "Commercial property", "Bungalow"];
+
+    public function property_pictures() {
+        return $this->hasMany(\App\Models\PropertiesPictures::class, 'property_id', 'property_id');
+    }
 }

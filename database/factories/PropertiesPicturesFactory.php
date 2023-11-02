@@ -18,7 +18,7 @@ class PropertiesPicturesFactory extends Factory
     {
         return [
             "name" => "pictures/image-".rand(0, 100).".png",
-            "property_id" => 1,
+            // "property_id" => 1,
             "type" => "kitchen",
         ];
     }

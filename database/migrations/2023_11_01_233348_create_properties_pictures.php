@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('properties_pictures', function (Blueprint $table) {
-            $table->id();
+            $table->id('property_picture_id');
             $table->string('name');
-            $table->foreignId('property_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('property_id')->constrained()->onDelete('cascade');
             $table->enum('type', ['bath', 'bedroom', 'kitchen', 'garage', 'outside'])->nullable();
+            $table->boolean('main')->default(false);
             $table->timestamps();
         });
     }

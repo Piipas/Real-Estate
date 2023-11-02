@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('properties', function (Blueprint $table) {
-            $table->id();
+            $table->id('property_id');
             $table->string('title');
             $table->enum('type', \App\Models\Property::types);
             $table->string('location');
