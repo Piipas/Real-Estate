@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('properties_pictures', function (Blueprint $table) {
-            $table->id('property_picture_id');
+        Schema::create('agents', function (Blueprint $table) {
+            $table->id('agent_id');
             $table->string('name');
-            $table->foreignId('property_id')->constrained('properties', 'property_id')->onDelete('cascade');
-            $table->enum('type', ['bath', 'bedroom', 'kitchen', 'garage', 'outside'])->nullable();
-            $table->boolean('main')->default(false);
+            $table->string('picture');
+            $table->string('profession');
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->string('linkedin');
+            $table->string('googleplus');
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('properties_pictures');
+        Schema::dropIfExists('agents');
     }
 };

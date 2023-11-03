@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Review>
  */
-class PropertiesPicturesFactory extends Factory
+class ReviewFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,7 @@ class PropertiesPicturesFactory extends Factory
     public function definition()
     {
         return [
-            "name" => "pictures/image-".rand(0, 100).".png",
-            "property_id" => 1,
-            "type" => "kitchen",
+            //
         ];
     }
 }

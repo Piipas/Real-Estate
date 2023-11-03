@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Route;
-use \App\Models\Property;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,8 @@ use \App\Models\Property;
 |
 */
 
-Route::get('/', function () {
-    return view('index', [
-        'lastProperties' => Property::all()->take(4),
-        'categories' => \App\Models\Property::types,
-    ]);
-});
+Route::get('/', [\App\Http\Controllers\Controller::class, 'index']);
+
+Route::get('/properties', [App\Http\Controllers\PropertyController::class, 'archive']);
+
+Route::get('/property/{property}', [\App\Http\Controllers\PropertyController::class, 'showProperty']);
