@@ -73,6 +73,6 @@
       </div>
     </div>
     {{-- Right/Secondary Side --}}
-    <x-left-widgets />
+    <x-right-widgets />
   </x-item-page>
 </x-layout>

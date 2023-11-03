@@ -9,6 +9,8 @@ class Article extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "article_id";
+
     public function comments() {
         return $this->hasMany(\App\Models\Comment::class, 'article_id', 'article_id');
     }

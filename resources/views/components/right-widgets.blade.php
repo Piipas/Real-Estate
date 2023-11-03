@@ -1,5 +1,5 @@
 <div class="col-md-4">
-  <aside class="aa-properties-sidebar">
+  <aside class="aa-sidebar">
     <!-- Start Single properties sidebar -->
     <div class="aa-properties-single-sidebar">
       <h3>Properties Search</h3>
@@ -9,7 +9,7 @@
         </div>
         <div class="aa-single-advance-search">
           <select id="" name="">
-           <option selected="" value="0">Category</option>
+            <option selected="" value="0">Category</option>
             <option value="1">Flat</option>
             <option value="2">Land</option>
             <option value="3">Plot</option>
@@ -59,11 +59,11 @@
     </div> 
     <!-- Start Single properties sidebar -->
     <div class="aa-properties-single-sidebar">
-      <h3>Populer Properties</h3>
+      <h3>Popular Properties</h3>
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="img/item/1.jpg" alt="img">
+            <img class="media-object" src="/img/item/1.jpg" alt="img">
           </a>
         </div>
         <div class="media-body">
@@ -75,7 +75,7 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="img/item/1.jpg" alt="img">
+            <img class="media-object" src="/img/item/1.jpg" alt="img">
           </a>
         </div>
         <div class="media-body">
@@ -87,7 +87,7 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="img/item/1.jpg" alt="img">
+            <img class="media-object" src="/img/item/1.jpg" alt="img">
           </a>
         </div>
         <div class="media-body">

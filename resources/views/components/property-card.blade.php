@@ -1,3 +1,4 @@
+@props(['property' => $property])
 <div {{$attributes}}>
   <article class="aa-properties-item">
     <a class="aa-properties-item-img" href="{{asset('/property/'.$property->property_id)}}">

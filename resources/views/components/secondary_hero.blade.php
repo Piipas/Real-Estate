@@ -1,3 +1,4 @@
+@props(['title' => $title])
 <section id="aa-property-header">
   <div class="container">
     <div class="row">

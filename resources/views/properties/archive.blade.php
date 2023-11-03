@@ -1,6 +1,6 @@
 <x-layout>
   <x-secondary_hero :title="'properties'" />
-  <x-item-page>
+  <x-item-page id="aa-properties">
     {{-- Left/Primary Side --}}
     <div class="col-md-8">
       <div class="aa-properties-content">
@@ -44,6 +44,6 @@
       </div>
     </div>
     {{-- Right/Secondary Side --}}
-    <x-left-widgets />
+    <x-right-widgets />
   </x-item-page>
 </x-layout>

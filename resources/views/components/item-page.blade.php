@@ -1,4 +1,4 @@
-<section id="aa-properties">
+<section {{$attributes}}>
   <div class="container">
     <div class="row">
       {{$slot}}

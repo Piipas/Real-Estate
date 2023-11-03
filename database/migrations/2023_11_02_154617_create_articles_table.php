@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('picture');
             $table->longText('content');
             $table->string('tags');
+            $table->foreignId('author_id')->constrained('users', 'id')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }
