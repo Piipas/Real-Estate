@@ -17,8 +17,16 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
               <div class="aa-header-right">
-                <a href="/register" class="aa-register">Register</a>
-                <a href="/signin" class="aa-login">Login</a>
+                @auth
+                  <a class="aa-register">Hi, {{auth()->user()->name}}.</a>
+                  <form action="/logout" method="post" style="display:inline">
+                    @csrf
+                    <input type="submit" class="aa-login" value="Logout" style="background-color:transparent;outline:none;border:0;cursor:pointer">
+                  </form>
+                @else
+                  <a href="/register" class="aa-register">Register</a>
+                  <a href="/login" class="aa-login">Login</a>
+                @endauth
               </div>
             </div>
           </div>

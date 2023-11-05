@@ -1,6 +1,6 @@
 <x-layout>
   <x-secondary_hero :title="$property->title" />
-  <x-item-page>
+  <x-item-page :id="'aa-properties'">
     {{-- Left/Primary Side --}}
     <div class="col-md-8">
       <div class="aa-properties-content">

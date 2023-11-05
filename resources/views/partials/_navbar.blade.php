@@ -24,8 +24,7 @@
               <li><a href="/properties">PROPERTIES</a></li>
               <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>                                            
             </ul> --}}
-          </li>
-          <li><a href="gallery.html">GALLERY</a></li>                                         
+          </li>                                        
           <li class="dropdown">
             <a class="dropdown-toggle"{{-- data-toggle="dropdown" --}} href="/blog">BLOG {{--<span class="caret"></span> --}}</a>
             {{-- <ul class="dropdown-menu" role="menu">                

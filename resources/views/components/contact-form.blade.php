@@ -22,7 +22,7 @@
     <input type="text" value="{{old('subject')}}" name="subject" />
   </p>
   <p class="comment-form-comment">
-    <label for="comment">Message</label>
+    <label for="email">Message <span class="required">*</span></label>
     @error('comment')
       <p class="h6 text-danger">{{$message}}</p>
     @enderror
