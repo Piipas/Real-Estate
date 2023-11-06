@@ -141,7 +141,7 @@
           </div>
         </div>
         {{-- Right/Secondary Side --}}
-        <x-right-widgets />
+        <x-right-widgets :categories="$categories" />
       </div>
     </div>
   </x-item-page>

@@ -5,7 +5,7 @@
   <section id="aa-advance-search">
   <div class="container">
     <div class="aa-advance-search-area">
-    <form class="form" action="/search" method="get">
+    <form class="form" action="/properties" method="GET">
       <div class="aa-advance-search-top">
       <div class="row">
         <div class="col-md-4">
@@ -16,6 +16,7 @@
         <div class="col-md-2">
         <div class="aa-single-advance-search">
           <select name="category">
+            <option>Category</option>
           @foreach ($categories as $category)
             <option value="{{$category}}">{{$category}}</option>
           @endforeach

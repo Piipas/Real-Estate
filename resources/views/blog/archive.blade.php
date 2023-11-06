@@ -16,7 +16,7 @@
               </div>
             </div>
           </div>
-          <x-right-widgets />
+          <x-right-widgets :categories="$categories" />
         </div>
       </div>
     </div>

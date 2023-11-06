@@ -10,17 +10,23 @@ use Illuminate\Http\Request;
 
 class PropertyController extends Controller
 {
-    public function showProperty(Property $property) {
+    public function show(Property $property) {
         return view('properties.show', [
             'property' => $property,
             'pictures' => $property->pictures()->orderBy('main', 'desc')->get(),
-            'nearby' => $property->just(2)
+            'nearby' => $property->just(2),
+            'categories' => Property::categories
         ]);
     }
 
     public function archive() {
         return view('properties.archive', [
-            'properties' => Property::latest()->paginate(4),
+            'properties' => Property::latest()->filter(request(['query', 'category']))->paginate(4),
+            'categories' => Property::categories
         ]);
+    }
+
+    public function search() {
+
     }
 }

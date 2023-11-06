@@ -3,20 +3,19 @@
     <!-- Start Single properties sidebar -->
     <div class="aa-properties-single-sidebar">
       <h3>Properties Search</h3>
-      <form action="">
+      <form action="/properties" method="GET">
         <div class="aa-single-advance-search">
-          <input type="text" placeholder="Type Your Location">
+          <input type="text" placeholder="Type Your Location" name="query">
         </div>
         <div class="aa-single-advance-search">
-          <select id="" name="">
+          <select id="" name="category">
             <option selected="" value="0">Category</option>
-            <option value="1">Flat</option>
-            <option value="2">Land</option>
-            <option value="3">Plot</option>
-            <option value="4">Commercial</option>
+            @foreach ($categories as $category)
+              <option value="{{$category}}">{{ucfirst($category)}}</option>
+            @endforeach
           </select>
         </div>
-        <div class="aa-single-advance-search">
+        {{-- <div class="aa-single-advance-search">
           <select id="" name="">
             <option selected="" value="0">Type</option>
             <option value="1">Flat</option>
@@ -33,7 +32,7 @@
             <option value="3">Plot</option>
             <option value="4">Commercial</option>
           </select>
-        </div>
+        </div> --}}
         <div class="aa-single-filter-search">
           <span>AREA (SQ)</span>
           <span>FROM</span>

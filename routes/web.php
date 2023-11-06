@@ -20,7 +20,7 @@ Route::get('/', [\App\Http\Controllers\Controller::class, 'index']);
 Route::get('/properties', [App\Http\Controllers\PropertyController::class, 'archive']);
 
 // Show Single Property
-Route::get('/property/{property}', [\App\Http\Controllers\PropertyController::class, 'showProperty']);
+Route::get('/property/{property}', [\App\Http\Controllers\PropertyController::class, 'show']);
 
 // Blog Archive
 Route::get('/blog', [\App\Http\Controllers\ArticleController::class, 'archive']);

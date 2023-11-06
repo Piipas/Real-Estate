@@ -44,6 +44,6 @@
       </div>
     </div>
     {{-- Right/Secondary Side --}}
-    <x-right-widgets />
+    <x-right-widgets :categories="$categories" />
   </x-item-page>
 </x-layout>

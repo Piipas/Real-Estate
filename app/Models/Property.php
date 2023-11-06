@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Property extends Model
 {
@@ -19,6 +20,17 @@ class Property extends Model
 
     public static function categories() {
         return self::categories;
+    }
+
+    public function scopeFilter($query, array $filters) {
+        if ($filters['query'] ?? false) {
+            $query->where('title', 'like', '%'.request('query').'%')
+            ->orWhere('description', 'like', '%'.request('query').'%');
+        }
+
+        if ($filters['category'] ?? false) {
+            $query->where('type', '=', request('category'));
+        }
     }
 
     public function pictures() {
